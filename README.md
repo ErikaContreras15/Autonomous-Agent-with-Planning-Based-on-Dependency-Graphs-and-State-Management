@@ -43,10 +43,4 @@ flowchart TD
     J --> K[Mostrar logs completos<br>+ resumen de ejecución]
     K --> L[✅ Éxito:<br>\"¡Pedido creado exitosamente!<br>Tu pedido #ORD-78901...\"]
 
-##🔍 Explicación del diagrama
-Input (1.a): El usuario ingresa una solicitud en lenguaje natural (input()).
-Embeddings (1.c): Se genera un vector de 384 dimensiones usando Sentence Transformers (herramienta 100% código abierto que cumple el requisito de "LMML" del examen).
-Function Selection (1.d): Búsqueda semántica mediante similitud coseno compara el embedding del query con descripciones de funciones predefinidas.
-Exploración del grafo (1.e): Neo4j resuelve todas las dependencias transitivas usando APOC y ordena el plan topológicamente (funciones sin dependencias primero).
-Ejecución (1.f): LangGraph orquesta la ejecución paso a paso. Cada función simulada solo ejecuta print() (cumple requisito del exa men).
-Output (1.g): Respuesta en lenguaje natural + logs completos con timestamps y niveles ([INPUT], [EXEC], [RESPONSE]).
+
