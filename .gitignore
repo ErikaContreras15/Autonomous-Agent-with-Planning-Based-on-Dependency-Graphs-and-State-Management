@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.env
+.venv/
+venv/
+env/
+pyvenv.cfg
+
+# Neo4j local (NO subir base de datos)
+neo4j/
+data/
+logs/
+.graph.db*
+debug.log
+neo4j*.log
+import/
+plugins/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Archivos temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Binarios y datasets grandes
+*.pkl
+*.h5
+*.bin
+*.model
+models/
+datasets/
