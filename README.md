@@ -1,4 +1,4 @@
-# FunctionMatcher Planner - EXAMEN VAN LOS PLANEERS
+# FunctionMatcher Planner
 
 > **Agente inteligente que orquesta funciones basadas en dependencias usando Neo4j + LangGraph**  
 > *Desarrollado para la asignatura de Análisis Multivariado - Ing. Remigio Hurtado (PhD)*
