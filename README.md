@@ -30,15 +30,15 @@ Input → Embeddings → Function Selection → Exploración grafo → Plan → 
 
 ## 🛠️ Stack Tecnológico
 
-| Componente | Tecnología | Tipo | Cumple requisito |
-|------------|------------|------|----------------|
-| Grafo de conocimiento | Neo4j 5.18 (Docker) | Base de datos de grafos | ✅ |
-| Orquestación | LangGraph | Máquina de estados | ✅ |
-| Embeddings | Sentence Transformers | Código abierto | ✅ |
-| Búsqueda semántica | Similitud coseno (scikit-learn) | Matching vectorial | ✅ |
-| Funciones simuladas | Python (`print()`) | Sin APIs externas | ✅ |
-| Interfaz gráfica | Streamlit + PyVis | UI interactiva | ✅ |
-| Visualización grafo | Neo4j Browser + PyVis | Visualización | ✅ |
+| Componente | Tecnología | Tipo | 
+|------------|------------|------|
+| Grafo de conocimiento | Neo4j 5.18 (Docker) | Base de datos de grafos | 
+| Orquestación | LangGraph | Máquina de estados | 
+| Embeddings | Sentence Transformers | Código abierto | 
+| Búsqueda semántica | Similitud coseno (scikit-learn) | Matching vectorial | 
+| Funciones simuladas | Python (`print()`) | Sin APIs externas | 
+| Interfaz gráfica | Streamlit + PyVis | UI interactiva | 
+| Visualización grafo | Neo4j Browser + PyVis | Visualización | 
 
 ---
 
