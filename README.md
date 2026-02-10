@@ -189,7 +189,7 @@ RETURN path
 | Confianza selección | 39.82% | Modelo ligero |
 
 ---
-## 📝 Conclusiones Técnicas
+## 📝 Conclusiones 
 
 - **Integración exitosa de técnicas multivariadas con IA aplicada:**  
   Los embeddings vectoriales —fundamentados en análisis multivariado— permiten transformar texto no estructurado en representaciones numéricas que habilitan la búsqueda semántica. Esto demuestra una aplicación directa de conceptos de la asignatura en un sistema funcional de IA.
