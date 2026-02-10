@@ -179,13 +179,18 @@ RETURN path
 | Confianza selección | 39.82% | Modelo ligero |
 
 ---
+## 📝 Conclusiones Técnicas
 
-## 📝 Conclusiones
+- **Integración exitosa de técnicas multivariadas con IA aplicada:**  
+  Los embeddings vectoriales —fundamentados en análisis multivariado— permiten transformar texto no estructurado en representaciones numéricas que habilitan la búsqueda semántica. Esto demuestra una aplicación directa de conceptos de la asignatura en un sistema funcional de IA.
 
-- Embeddings = aplicación real de análisis multivariado  
-- Grafos modelan dependencias naturalmente  
-- LangGraph permite orquestación robusta  
-- Herramientas open source cumplen requisitos académicos  
+- **Grafos como modelo natural para dependencias:**  
+  Neo4j representa de forma intuitiva las relaciones `[:REQUIRES]` entre funciones, facilitando la generación de planes topológicos sin necesidad de implementar algoritmos complejos manualmente. El modelo gráfico simplifica la resolución de dependencias transitivas.
+
+- **Orquestación mediante máquinas de estado:**  
+  LangGraph permite coordinar flujos de ejecución complejos de forma estructurada, asegurando trazabilidad completa mediante logs y control explícito del estado del sistema en cada paso.
+
+
 
 ---
 
