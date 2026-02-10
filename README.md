@@ -210,7 +210,7 @@ RETURN path
 econtrerasz@est.ups.edu.ec
 
 **Jorge Pizarro**  
-jpizarro@est.ups.edu.ec
+jpizarrol1@est.ups.edu.ec
 
 Universidad Politécnica Salesiana — Ecuador  
 Docente: Ing. Remigio Hurtado (PhD)
