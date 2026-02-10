@@ -81,25 +81,35 @@ LangGraph ejecuta funciones simuladas paso a paso.
 ```
 
 ---
-
 ## 📁 Estructura del Proyecto
 
 ```bash
 AgenteFuncionMatcher/
-├── docker-compose.yml
-├── .env
-├── notebooks/
-│   ├── init_graph.py
-│   ├── functions.py
-│   ├── dependency_resolver.py
-│   └── planner_agent.py
+├── src/
+│   └── agent/
+│       ├── __pycache__/
+│       ├── dependency_resolver.py   # Resolución de dependencias en Neo4j
+│       ├── function_matcher.py      # Selección semántica de funciones
+│       ├── functions.py             # Funciones simuladas del sistema
+│       ├── init_graph.py            # Inicialización del grafo en Neo4j
+│       └── planner_agent.py         # Agente principal orquestado con LangGraph
+│
 ├── Streamlit/
-│   ├── app.py
-│   ├── styles.py
-│   └── templates.py
-├── requirements.txt
-└── README.md
+│   ├── __pycache__/
+│   ├── app.py                       # Interfaz gráfica principal
+│   ├── styles.py                    # Estilos visuales
+│   └── templates.py                 # Componentes reutilizables
+│
+├── .env                             # Variables de entorno
+├── .env.example                     # Plantilla de configuración
+├── .gitignore
+├── docker-compose.yml               # Neo4j en Docker
+├── requirements.txt                 # Dependencias Python
+├── test_connection.py               # Prueba de conexión Neo4j
+├── test_env.py                      # Verificación del entorno
+└── README.md                        # Documentación del proyecto
 ```
+
 
 ---
 
