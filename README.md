@@ -3,18 +3,22 @@
 > **Agente inteligente que orquesta funciones basadas en dependencias usando Neo4j + LangGraph**  
 
 ---
+![Interfaz Streamlit](https://via.placeholder.com/800x400?text=Interfaz+Gr%C3%A1fica+Streamlit+%7C+Neo4j+%2B+LangGraph)
 
-## 📌 Resumen
+## 📌 Resumen Ejecutivo
 
-El **FunctionMatcher Planner** es un agente AI que resuelve solicitudes del usuario mediante:
+El **FunctionMatcher Planner** es un agente AI que resuelve solicitudes del usuario en lenguaje natural mediante un flujo de 7 pasos:
 
-1. **Búsqueda semántica** para identificar la función objetivo usando embeddings de código abierto  
-2. **Exploración del grafo de conocimiento** (Neo4j) para resolver dependencias transitivas `[:REQUIRES]`  
-3. **Planificación topológica** para ordenar la ejecución de funciones  
-4. **Orquestación con LangGraph** para ejecutar el plan paso a paso  
-5. **Respuesta natural** al usuario con resumen de la ejecución  
+1. **Input**: Recibe query del usuario (`input()`)
+2. **Embeddings**: Genera vector con herramienta código abierto (Sentence Transformers ≈ LMML)
+3. **Function Selection**: Búsqueda semántica por similitud coseno
+4. **Exploración del grafo**: Resuelve dependencias transitivas `[:REQUIRES]` en Neo4j
+5. **Planificación**: Ordena ejecución topológicamente (funciones sin dependencias primero)
+6. **Ejecución**: Orquesta pasos con LangGraph (`StateGraph`)
+7. **Output**: Respuesta natural + logs completos con timestamps
 
-Este sistema implementa el flujo completo requerido en el examen:
+Este sistema implementa **exactamente el flujo requerido en el examen**:
+
 
 ```
 Input → Embeddings (LMML) → Function Selection → Exploración grafo → Plan → Ejecución → Output
@@ -79,6 +83,8 @@ Respuesta natural + logs completos con timestamps y niveles:
 ```
 
 ---
+
+
 
 ## 🚀 Ejecución Paso a Paso
 
