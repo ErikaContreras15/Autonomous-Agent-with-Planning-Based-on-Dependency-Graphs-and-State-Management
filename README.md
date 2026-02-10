@@ -34,8 +34,6 @@ Input → Embeddings (LMML) → Function Selection → Exploración grafo → Pl
 | **Interfaz gráfica** | Streamlit + PyVis | UI moderna e interactiva | ✅ Logs + visualización |
 | **Visualización grafo** | Neo4j Browser + PyVis | Interfaz gráfica del grafo | ✅ Visualización del grafo |
 
-> 💡 **Nota sobre LMML**: Sentence Transformers es la implementación real de código abierto que cumple el requisito conceptual de "LMML" del enunciado. Es 100% local, sin API keys, y genera embeddings vectoriales idénticos en propósito a los descritos en el examen.
-
 ## 🔄 Arquitectura del Sistema (Diagrama Mermaid)
 
 ```mermaid
