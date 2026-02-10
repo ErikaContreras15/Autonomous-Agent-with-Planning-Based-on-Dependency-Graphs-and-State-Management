@@ -17,7 +17,7 @@ class FunctionMatcherPlanner:
         self.logs = []
         self.start_time = None
         print("="*70)
-        print("🚀 FUNCTION MATCHER PLANNER - EXAMEN VAN LOS PLANEERS")
+        print("🚀 FUNCTION MATCHER PLANNER - PLANEERS")
         print("="*70)
         print(f"📍 Conexión Neo4j: {os.getenv('NEO4J_URI', 'bolt://localhost:7687')}")
         print()

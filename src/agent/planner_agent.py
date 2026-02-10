@@ -14,8 +14,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Componentes del sistema
-from functions import FUNCTION_REGISTRY
-from dependency_resolver import DependencyResolver
+from src.agent.functions import FUNCTION_REGISTRY
+from src.agent.dependency_resolver import DependencyResolver
 
 # LangGraph
 from langgraph.graph import StateGraph, END
@@ -51,7 +51,7 @@ class FunctionMatcherAgent:
     
     def _print_header(self):
         print("="*70)
-        print("🚀 FUNCTION MATCHER PLANNER - EXAMEN VAN LOS PLANEERS")
+        print("🚀 FUNCTION MATCHER PLANNER")
         print("="*70)
         print(f"📍 Conexión Neo4j: {os.getenv('NEO4J_URI', 'bolt://localhost:7687')}")
         print(f"🧠 Modelo de embeddings: all-MiniLM-L6-v2 (código abierto)")
@@ -151,7 +151,7 @@ class FunctionMatcherAgent:
         elif "producto" in state["user_query"].lower():
             response = "✅ Información del producto: Laptop Gamer X1 (SKU: LAP-2026), precio: $1,299.99."
         elif "cliente" in state["user_query"].lower():
-            response = "✅ Información del cliente: Juan Pérez (ID: 12345)."
+            response = "✅ Información del cliente: Erika (ID: 12345)."
         else:
             response = f"✅ Solicitud procesada: {target}"
         

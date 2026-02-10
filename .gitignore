@@ -39,3 +39,8 @@ Thumbs.db
 *.model
 models/
 datasets/
+
+# Streamlit cache
+.streamlit/
+*.pyc
+__pycache__/

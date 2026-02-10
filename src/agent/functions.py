@@ -7,8 +7,8 @@ Cada función solo imprime su ejecución (simulación)
 def obtenerInfoCliente():
     """Obtiene información del cliente por ID o nombre"""
     print("   → [FUNC] Obteniendo información del cliente...")
-    print("   → [FUNC] Cliente: Juan Pérez (ID: 12345)")
-    return {"cliente_id": 12345, "nombre": "Juan Pérez", "email": "juan@example.com"}
+    print("   → [FUNC] Cliente: Erika  (ID: 12345)")
+    return {"cliente_id": 12345, "nombre": "Erika", "email": "ericontreras16@gmail.com"}
 
 def obtenerInfoProducto():
     """Obtiene información del producto por SKU o nombre"""
@@ -37,8 +37,8 @@ def crearPedido():
 def enviarConfirmacion():
     """Envía correo de confirmación al cliente"""
     print("   → [FUNC] Enviando correo de confirmación...")
-    print("   → [FUNC] Email enviado a juan@example.com con detalles del pedido")
-    return {"enviado": True, "destinatario": "juan@example.com"}
+    print("   → [FUNC] Email enviado a ericontreras16@gmail.com con detalles del pedido")
+    return {"enviado": True, "destinatario": "ericontreras16@gmail.com"}
 
 # Mapeo de nombres de funciones (strings) a implementaciones
 FUNCTION_REGISTRY = {
