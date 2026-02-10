@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Resumen Ejecutivo
+## 📌 Resumen
 
 El **FunctionMatcher Planner** es un agente AI que resuelve solicitudes del usuario en lenguaje natural mediante un flujo de 7 pasos:
 
