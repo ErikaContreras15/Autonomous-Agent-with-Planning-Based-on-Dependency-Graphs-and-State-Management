@@ -192,7 +192,10 @@ RETURN path
 ## 👤 Autores
 
 **Erika Contreras**  
+econtrerasz@est.ups.edu.ec
 **Jorge Pizarro**  
+jpizarro@est.ups.edu.ec
+
 Universidad Politécnica Salesiana — Ecuador  
 Asignatura: Análisis Multivariado  
 Docente: Ing. Remigio Hurtado (PhD)
