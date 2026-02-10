@@ -198,7 +198,6 @@ econtrerasz@est.ups.edu.ec
 jpizarro@est.ups.edu.ec
 
 Universidad Politécnica Salesiana — Ecuador  
-Asignatura: Análisis Multivariado  
 Docente: Ing. Remigio Hurtado (PhD)
 
 ---
