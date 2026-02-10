@@ -193,6 +193,7 @@ RETURN path
 
 **Erika Contreras**  
 econtrerasz@est.ups.edu.ec
+
 **Jorge Pizarro**  
 jpizarro@est.ups.edu.ec
 
