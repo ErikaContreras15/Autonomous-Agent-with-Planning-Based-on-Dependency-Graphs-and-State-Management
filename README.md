@@ -24,34 +24,35 @@ Input → Embeddings (LMML) → Function Selection → Exploración grafo → Pl
 
 ## 🛠️ Stack Tecnológico
 
-| Componente | Tecnología | Tipo |
-|------------|------------|------|
-| **Grafo de conocimiento** | Neo4j 5.18 Community (Docker) | Base de datos de grafos |
-| **Orquestación** | LangGraph (`StateGraph`) | Framework de flujos de estado |
-| **Embeddings** | Sentence Transformers (`all-MiniLM-L6-v2`) | ✅ Herramienta código abierto (equivalente a LMML) |
-| **Búsqueda semántica** | LangChain + Similitud Coseno (scikit-learn) | Matching vectorial |
-| **Funciones simuladas** | Python puro (`print()` únicamente) | Sin APIs externas |
-| **Visualización** | Neo4j Browser | Interfaz gráfica del grafo |
+| Componente | Tecnología | Tipo | Cumple requisito |
+|------------|------------|------|------------------|
+| **Grafo de conocimiento** | Neo4j 5.18 Community (Docker) | Base de datos de grafos | ✅ Visualización y gestión del grafo |
+| **Orquestación** | LangGraph (`StateGraph`) | Framework de flujos de estado | ✅ Ejecución y monitoreo |
+| **Embeddings** | Sentence Transformers (`all-MiniLM-L6-v2`) | ✅ **Herramienta código abierto** | ✅ Equivalente a LMML |
+| **Búsqueda semántica** | Similitud coseno (scikit-learn) | Matching vectorial | ✅ Function selection |
+| **Funciones simuladas** | Python puro (`print()` únicamente) | Sin APIs externas | ✅ Requisito del examen |
+| **Interfaz gráfica** | Streamlit + PyVis | UI moderna e interactiva | ✅ Logs + visualización |
+| **Visualización grafo** | Neo4j Browser + PyVis | Interfaz gráfica del grafo | ✅ Visualización del grafo |
 
----
+> 💡 **Nota sobre LMML**: Sentence Transformers es la implementación real de código abierto que cumple el requisito conceptual de "LMML" del enunciado. Es 100% local, sin API keys, y genera embeddings vectoriales idénticos en propósito a los descritos en el examen.
 
-## 🔄 Flujo del Agente (Diagrama Mermaid)
+## 🔄 Arquitectura del Sistema (Diagrama Mermaid)
 
 ```mermaid
 flowchart TD
-    A[Input: Query del usuario<br>ej: "Quiero comprar una laptop gamer"] --> B[Generar embedding<br>Sentence Transformers<br>✅ Herramienta código abierto<br>(equivalente a LMML)]
+    A[Input: Query del usuario<br>ej: \"Quiero comprar una laptop gamer\"] --> B[Generar embedding<br>Sentence Transformers<br>✅ Herramienta código abierto<br>(equivalente a LMML)]
     B --> C[Búsqueda semántica<br>Similitud coseno<br>LangChain]
     C --> D[Función objetivo<br>ej: crearPedido<br>confianza: 39.82%]
     D --> E[Explorar grafo Neo4j<br>Relaciones [:REQUIRES]<br>APOC subgraphNodes]
     E --> F[Plan topológico ordenado<br>1. obtenerInfoCliente<br>2. obtenerInfoProducto<br>3. verificarStock<br>4. calcularPrecioTotal<br>5. crearPedido]
     F --> G{LangGraph<br>Ejecutar paso?}
-    G -->|Sí| H[Ejecutar función<br>simulada con print()<br>ej: "→ [FUNC] Creando pedido..."]
+    G -->|Sí| H[Ejecutar función<br>simulada con print()<br>ej: \"→ [FUNC] Creando pedido...\")
     H --> I[Registrar resultado<br>+ log con timestamp]
     I --> G
     G -->|No| J[Generar respuesta<br>natural al usuario]
     J --> K[Mostrar logs completos<br>+ resumen de ejecución]
-    K --> L[✅ Éxito:<br>"¡Pedido creado exitosamente!<br>Tu pedido #ORD-78901..."]
-```
+    K --> L[✅ Éxito:<br>\"¡Pedido creado exitosamente!<br>Tu pedido #ORD-78901...\"]
+
 
 ---
 
